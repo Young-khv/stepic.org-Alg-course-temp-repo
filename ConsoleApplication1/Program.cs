@@ -11,7 +11,7 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             var input = Console.ReadLine();
-            var nodes = input
+            var nodesList = input
                             .ToCharArray()
                             .Distinct()
                             .Select(t => new Node()
@@ -23,16 +23,17 @@ namespace ConsoleApplication1
                             .OrderBy(t => t.Frequency)
                             .ToList();
 
-            //TODO: puch isNotLetter nodes into right everytime
+            var nodes = new Queue<Node>(nodesList);
+            
             var count = nodes.Count;
             for (int i = 0;i< count - 1; i++)
             {
                 var left = nodes.Min();
-                nodes.Remove(left);
+                nodes.Dequeue();
                 var right = nodes.Min();
-                nodes.Remove(right);
+                nodes.Dequeue();
 
-                nodes.Add(new Node()
+                nodes.Enqueue(new Node()
                 {
                     Frequency = left.Frequency + right.Frequency,
                     Left = left,
@@ -40,6 +41,22 @@ namespace ConsoleApplication1
                     IsLetter = false
                 });
             }
+        }
+
+        public class PQueue<T> where T : IComparable
+        {
+
+            private PQueue(List<T> list)
+            {
+
+            }
+        }
+
+        public class PQueueItem<T> where T : IComparable
+        {
+            public PQueue<T> Parent { get; set; }
+            public PQueue<T> Child { get; set; }
+            public T Item { get; set; }
         }
 
         public class Node : IComparable
@@ -55,15 +72,7 @@ namespace ConsoleApplication1
             public int CompareTo(object obj)
             {
                 var node = (Node) obj;
-                var comp = Frequency.CompareTo(node.Frequency);
-                if (comp == 0)
-                {
-                    return IsLetter.CompareTo(node.IsLetter);
-                }
-                else
-                {
-                    return comp;
-                }
+                return IsLetter.CompareTo(node.IsLetter);
             }
         }
     }
