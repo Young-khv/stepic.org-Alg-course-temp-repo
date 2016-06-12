@@ -11,6 +11,15 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             var input = Console.ReadLine();
+            var q = new PQueue<int>();
+            q.Enqueue(1);
+            q.Enqueue(5);
+            q.Enqueue(3);
+            q.Enqueue(2);
+
+            q.Dequeue();
+            var xx = q.Dequeue();
+            Console.WriteLine(xx);
             var nodesList = input
                             .ToCharArray()
                             .Distinct()
@@ -23,39 +32,122 @@ namespace ConsoleApplication1
                             .OrderBy(t => t.Frequency)
                             .ToList();
 
-            var nodes = new Queue<Node>(nodesList);
-            
-            var count = nodes.Count;
-            for (int i = 0;i< count - 1; i++)
-            {
-                var left = nodes.Min();
-                nodes.Dequeue();
-                var right = nodes.Min();
-                nodes.Dequeue();
+            var nodes = new PQueue<Node>(nodesList);
+           
+            //var count = nodes.Count;
+            //for (int i = 0;i< count - 1; i++)
+            //{
+            //    var left = nodes.Min();
+            //    nodes.Dequeue();
+            //    var right = nodes.Min();
+            //    nodes.Dequeue();
 
-                nodes.Enqueue(new Node()
-                {
-                    Frequency = left.Frequency + right.Frequency,
-                    Left = left,
-                    Right = right,
-                    IsLetter = false
-                });
-            }
+            //    nodes.Enqueue(new Node()
+            //    {
+            //        Frequency = left.Frequency + right.Frequency,
+            //        Left = left,
+            //        Right = right,
+            //        IsLetter = false
+            //    });
+            //}
         }
 
         public class PQueue<T> where T : IComparable
         {
-
-            private PQueue(List<T> list)
+            private PQueueItem<T> _startItem;
+            private int _count = 0;
+            public int Count
             {
+                get { return _count; }
+            }
 
+            public PQueue()
+            {
+            }
+
+            public PQueue(List<T> list)
+            {
+                _startItem = new PQueueItem<T>() {Item = list.First(), Parent = null};
+                var currentItem = _startItem;
+                _count++;
+                for (int i = 1; i < list.Count - 1; i++)
+                {
+                    currentItem.Child = new PQueueItem<T>() { Item = list[i], Parent = currentItem};
+                    currentItem = currentItem.Child;
+                    _count++;
+                }
+            }
+
+            public void Enqueue(T item)
+            {
+                _count++;
+                var stepItem = _startItem;
+                var newItem = new PQueueItem<T>() {Item = item};
+                if (_startItem == null)
+                {
+                    _startItem = newItem;
+                    return;
+                }
+
+                while (stepItem.Child != null)
+                {
+                    if (item.CompareTo(stepItem.Item) <=0)
+                    {
+                        if (stepItem.Parent == null) // first element
+                        {
+                            newItem.Child = stepItem;
+                            newItem.Parent = null; 
+                            _startItem = newItem;
+                            stepItem.Parent = newItem;
+                        }
+                        else // midle element
+                        {
+                            newItem.Child = stepItem;
+                            newItem.Parent = stepItem.Parent;
+                            stepItem.Parent.Child = newItem;
+                            stepItem.Parent = newItem;
+                        }
+                        return;
+                    }
+                    stepItem = stepItem.Child;
+                }
+
+                //last element
+                newItem.Parent = stepItem;
+                stepItem.Child = newItem;
+            }
+
+            public T Dequeue()
+            {
+                if (_startItem != null)
+                {
+                    _count--;
+                    var result = _startItem.Item;
+                    _startItem = _startItem.Child;
+                    return result;
+                }
+                return default(T);
+            }
+
+            public List<T> ToList()
+            {
+                var result = new List<T>();
+                var stepItem = _startItem;
+                result.Add(stepItem.Item);
+                while (stepItem.Child != null)
+                {
+                    result.Add(stepItem.Child.Item);
+                    stepItem = stepItem.Child;
+                }
+
+                return result;
             }
         }
 
         public class PQueueItem<T> where T : IComparable
         {
-            public PQueue<T> Parent { get; set; }
-            public PQueue<T> Child { get; set; }
+            public PQueueItem<T> Parent { get; set; }
+            public PQueueItem<T> Child { get; set; }
             public T Item { get; set; }
         }
 
