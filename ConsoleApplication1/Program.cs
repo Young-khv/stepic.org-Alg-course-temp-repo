@@ -11,15 +11,7 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             var input = Console.ReadLine();
-            var q = new PQueue<int>();
-            q.Enqueue(1);
-            q.Enqueue(5);
-            q.Enqueue(3);
-            q.Enqueue(2);
-
-            q.Dequeue();
-            var xx = q.Dequeue();
-            Console.WriteLine(xx);
+           
             var nodesList = input
                             .ToCharArray()
                             .Distinct()
@@ -33,23 +25,21 @@ namespace ConsoleApplication1
                             .ToList();
 
             var nodes = new PQueue<Node>(nodesList);
-           
-            //var count = nodes.Count;
-            //for (int i = 0;i< count - 1; i++)
-            //{
-            //    var left = nodes.Min();
-            //    nodes.Dequeue();
-            //    var right = nodes.Min();
-            //    nodes.Dequeue();
 
-            //    nodes.Enqueue(new Node()
-            //    {
-            //        Frequency = left.Frequency + right.Frequency,
-            //        Left = left,
-            //        Right = right,
-            //        IsLetter = false
-            //    });
-            //}
+            var count = nodes.Count;
+            for (int i = 0; i < count - 1; i++)
+            {
+                var left = nodes.Dequeue();
+                var right = nodes.Dequeue();
+               
+                nodes.Enqueue(new Node()
+                {
+                    Frequency = left.Frequency + right.Frequency,
+                    Left = left,
+                    Right = right,
+                    IsLetter = false
+                });
+            }
         }
 
         public class PQueue<T> where T : IComparable
@@ -70,7 +60,7 @@ namespace ConsoleApplication1
                 _startItem = new PQueueItem<T>() {Item = list.First(), Parent = null};
                 var currentItem = _startItem;
                 _count++;
-                for (int i = 1; i < list.Count - 1; i++)
+                for (int i = 1; i < list.Count; i++)
                 {
                     currentItem.Child = new PQueueItem<T>() { Item = list[i], Parent = currentItem};
                     currentItem = currentItem.Child;
@@ -124,6 +114,7 @@ namespace ConsoleApplication1
                     _count--;
                     var result = _startItem.Item;
                     _startItem = _startItem.Child;
+                    _startItem.Parent = null;
                     return result;
                 }
                 return default(T);
@@ -164,7 +155,7 @@ namespace ConsoleApplication1
             public int CompareTo(object obj)
             {
                 var node = (Node) obj;
-                return IsLetter.CompareTo(node.IsLetter);
+                return Frequency.CompareTo(node.Frequency);
             }
         }
     }
