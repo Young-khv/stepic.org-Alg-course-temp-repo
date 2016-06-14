@@ -10,3 +10,4 @@ S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\obj\Debug\ConsoleApp
 S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\app3.2.1.exe.config
