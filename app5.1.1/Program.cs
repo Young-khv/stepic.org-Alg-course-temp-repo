@@ -12,14 +12,14 @@ namespace app5._1._1
             input1 = input1.Substring(input1.IndexOf(" "));
             var array = input1.Split()
                                     .Where(t => t != "")
-                                    .Select(t => int.Parse(t))
+                                    .Select(int.Parse)
                                     .ToArray();
 
             var input2 = Console.ReadLine();
             input2 = input2.Substring(input2.IndexOf(" "));
             var items = input2.Split()
                                     .Where(t => t != "")
-                                    .Select(t => int.Parse(t))
+                                    .Select(int.Parse)
                                     .ToArray();
             foreach (var item in items)
             {
