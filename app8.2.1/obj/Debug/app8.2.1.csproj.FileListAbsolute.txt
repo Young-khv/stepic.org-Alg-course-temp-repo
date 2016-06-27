@@ -1,0 +1,6 @@
+C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.1\bin\Debug\app8.2.1.exe.config
+C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.1\bin\Debug\app8.2.1.exe
+C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.1\bin\Debug\app8.2.1.pdb
+C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.1\obj\Debug\app8.2.1.csprojResolveAssemblyReference.cache
+C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.1\obj\Debug\app8.2.1.exe
+C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.1\obj\Debug\app8.2.1.pdb
