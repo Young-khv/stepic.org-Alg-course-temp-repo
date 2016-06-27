@@ -26,13 +26,15 @@ namespace app5._5._1
             points.AddRange(pArray);
             var result = new Dictionary<int, int>();
             int count = 0; 
+            
             foreach (var p in points.OrderBy(t => t.X).ThenBy(t => t.State))
             {
                 if (p.State == PointState.Start)
                     count++;
 
                 if(p.State == PointState.Working)
-                    result.Add(p.X, count);
+                    if(!result.ContainsKey(p.X))
+                        result.Add(p.X, count);
 
                 if (p.State == PointState.End)
                     count--;
