@@ -40,15 +40,24 @@ namespace app8._2._2
                 {
                     t[i] = i;
                     len++;
-                    continue;
-                }
-
-                if (array[i] > array[t[0]])
+                } else if (array[i] <= array[t[len]])
                 {
-
+                    r[len + 1] = i;
+                    t[i] = len++;
+                }else if (array[i] > array[t[0]])
+                {
+                    t[0] = i;
+                }else{
+                    SetItemToRightPosition(array, i, r, t, len);
                 }
 
             }
+            return null;
+        }
+
+        public static void SetItemToRightPosition(int[]array, int index, int[] r, int[] t, int len)
+        {
+            // TODO: set item array[index] to the right pos in r with binary search
         }
     }
 }
