@@ -1,0 +1,5 @@
+C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.2\bin\Debug\app8.2.2.exe.config
+C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.2\bin\Debug\app8.2.2.exe
+C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.2\bin\Debug\app8.2.2.pdb
+C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.2\obj\Debug\app8.2.2.exe
+C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.2\obj\Debug\app8.2.2.pdb
