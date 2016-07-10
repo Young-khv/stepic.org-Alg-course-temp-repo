@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -40,14 +41,18 @@ namespace app8._2._2
                 {
                     t[i] = i;
                     len++;
-                } else if (array[i] <= array[t[len]])
+                }
+                else if (array[i] <= array[t[len]])
                 {
                     r[len + 1] = i;
                     t[i] = len++;
-                }else if (array[i] > array[t[0]])
+                }
+                else if (array[i] > array[t[0]])
                 {
                     t[0] = i;
-                }else{
+                }
+                else
+                {
                     SetItemToRightPosition(array, i, r, t, len);
                 }
 
@@ -57,7 +62,29 @@ namespace app8._2._2
 
         public static void SetItemToRightPosition(int[]array, int index, int[] r, int[] t, int len)
         {
-            // TODO: set item array[index] to the right pos in r with binary search
+            var idx = GetIndex(array, r, array[index]);
+        }
+
+        public static int GetIndex(int[] array,int[]idxs, int item)
+        {
+            var l = 1;
+            var r = array.Length - 1;
+            while (l + 1 != r)
+            {
+                int i = (l + r) / 2;
+                if (array[idxs[i]] < item)
+                {
+                    r = i;
+                }
+                else
+                {
+                    l = i;
+                }
+            }
+            if (array[idxs[l]] == item && array[idxs[r]] < item)
+                return r + 1;
+
+            return -1;
         }
     }
 }

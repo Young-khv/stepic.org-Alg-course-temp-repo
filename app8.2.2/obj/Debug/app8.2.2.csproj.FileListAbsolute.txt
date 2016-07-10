@@ -3,6 +3,21 @@ C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplicatio
 C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.2\bin\Debug\app8.2.2.pdb
 C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.2\obj\Debug\app8.2.2.exe
 C:\Users\Arkadiy Parinov\Documents\Visual Studio 2015\Projects\ConsoleApplication1\app8.2.2\obj\Debug\app8.2.2.pdb
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\app8.2.2.exe.config
 S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\obj\Debug\app8.2.2.csprojResolveAssemblyReference.cache
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\app8.2.2.exe
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\app8.2.2.pdb
 S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\obj\Debug\app8.2.2.exe
 S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\obj\Debug\app8.2.2.pdb
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\xunit.abstractions.dll
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\xunit.assert.dll
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\xunit.core.dll
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\xunit.execution.desktop.dll
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\xunit.assert.pdb
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\xunit.assert.xml
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\xunit.core.pdb
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\xunit.core.xml
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\xunit.execution.desktop.pdb
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\xunit.execution.desktop.xml
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.2.2\bin\Debug\xunit.runner.utility.desktop.dll

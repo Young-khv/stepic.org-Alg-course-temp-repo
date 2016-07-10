@@ -4,3 +4,14 @@ S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\app3.2.1.p
 S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\obj\Debug\app3.2.1.exe
 S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\obj\Debug\app3.2.1.pdb
 S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\obj\Debug\app3.2.1.csprojResolveAssemblyReference.cache
+S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\xunit.abstractions.dll
+S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\xunit.assert.dll
+S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\xunit.core.dll
+S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\xunit.execution.desktop.dll
+S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\xunit.abstractions.xml
+S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\xunit.assert.pdb
+S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\xunit.assert.xml
+S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\xunit.core.pdb
+S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\xunit.core.xml
+S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\xunit.execution.desktop.pdb
+S:\Pets\stepic.org-Alg-course-temp-repo\ConsoleApplication1\bin\Debug\xunit.execution.desktop.xml
