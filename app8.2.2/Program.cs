@@ -16,7 +16,7 @@ namespace app8._2._2
                                         .Split()
                                         .Select(int.Parse)
                                         .ToArray();
-
+            
             var result = NISequence(array);
             Console.WriteLine(result.Count);
             for (int i = result.Count - 1; i > -1; i--)
@@ -54,20 +54,21 @@ namespace app8._2._2
                 }
                 else
                 {
-                   SetItemToRightPosition(array, i, r, t, len);
+                    SetItemToRightPosition(array, i, r, t, len);
                 }
 
             }
 
             var result = new List<int>();
             var startIdx = -1;
-            var max = -1;
-            for (int i = 0; i < r.Length; i++)
+            var item = array[t[len]];
+
+            for (int i = r.Length - 1; i >= 0; i--)
             {
-                if (r[i] > max)
+                if (array[i] == item)
                 {
-                    max = r[i];
                     startIdx = i;
+                    break;
                 }
             }
 
@@ -82,7 +83,7 @@ namespace app8._2._2
                 result.Add(startIdx);
                 startIdx = r[startIdx];
             }
-           
+
             return result;
         }
 
@@ -95,19 +96,19 @@ namespace app8._2._2
                 message.Append($"Can't find valuable index for item: {array[index]} in array: {array[t[0]]}");
                 for (int i = 1; i < t.Length; i++)
                 {
-                    if(t[i] == 0) break;
+                    if (t[i] == 0) break;
                     message.Append($", {array[t[i]]}");
                 }
 
                 throw new Exception(message.ToString());
             }
-          
+
             t[idx] = index;
-            r[index] = idx - 1;// TODO: look to this code part
+            r[index] = t[idx - 1];
 
         }
 
-        public static int GetIndex(int[] array, int[]idxs, int item, int len)
+        public static int GetIndex(int[] array, int[] idxs, int item, int len)
         {
             if (len + 1 == 2)
                 return len;
