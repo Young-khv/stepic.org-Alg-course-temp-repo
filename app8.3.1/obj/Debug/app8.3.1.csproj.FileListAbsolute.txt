@@ -1,0 +1,6 @@
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.3.1\bin\Debug\app8.3.1.exe.config
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.3.1\bin\Debug\app8.3.1.exe
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.3.1\bin\Debug\app8.3.1.pdb
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.3.1\obj\Debug\app8.3.1.csprojResolveAssemblyReference.cache
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.3.1\obj\Debug\app8.3.1.exe
+S:\Pets\stepic.org-Alg-course-temp-repo\app8.3.1\obj\Debug\app8.3.1.pdb
